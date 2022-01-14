@@ -47,6 +47,7 @@ def get_prices_and_ids(soup):
         id_list.append(id)
 
 def get_paginator(soup):
+    paginator = None
     ##  Find the paginator
     if soup.find("div", {"id": "endOfListMarker"}) is None:
         #   If the end tag doesn't exist, continue
@@ -100,7 +101,7 @@ else:
     old_prices = new_prices.copy()
 
 #   Compare prices
-for id in old_prices["ID"]:
+for id in new_prices["ID"]:
     new_price = new_prices.loc[new_prices["ID"]==id, "Price"].values[0]
     name      = new_prices.loc[new_prices["ID"]==id, "Name" ].values[0]
     #   If a book has recently been added to the wishlist, it won't have an old price
