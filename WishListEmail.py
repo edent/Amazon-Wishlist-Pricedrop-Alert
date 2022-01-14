@@ -111,7 +111,7 @@ for id in new_prices["ID"]:
         #   Some prices are ""-Infinity", so check the price is more than zero
         if float(new_price) < 1 and float(new_price) > 0:
             message += (name + "\n£" + str(new_price) + " was £" + str(old_price) + " https://www.amazon.co.uk/dp/"+id + "\n")
-        elif float(new_price) < float(old_price):
+        elif float(new_price) < float(old_price) and float(new_price) > 0:
             message += (name + "\n£" + str(new_price) + " was £" + str(old_price) + " https://www.amazon.co.uk/dp/"+id + "\n")
 
 #   Send the email with the price drop alert
