@@ -78,7 +78,7 @@ def send_email(message):
     msg.set_content(message)
     msg['Subject'] = "Today's price drops"
     msg['From']    = email_user
-    msg['To']      = to
+    msg['To']      = email_to
     server = smtplib.SMTP_SSL(smtp_server, 465)
     server.ehlo()
     server.login(email_user, email_password)
