@@ -1,5 +1,7 @@
 # Amazon Wishlist Pricedrop Alert
-Emails you when items on your wishlist drop in price. You'll need to add your own Wishlist URl and your own mailserver details.
+Emails you when items on your wishlist drop in price.
+
+You will need to add your own Wishlist URl and your own mailserver details.
 
 [Full details on my blog](https://shkspr.mobi/blog/2022/01/use-python-to-get-alerted-when-an-amazon-wishlist-item-drops-in-price/).
 
